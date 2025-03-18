@@ -6,10 +6,13 @@ on:
 
 jobs:
   test:
+    # ubuntu is de runner
     runs-on: ubuntu-latest
     steps:
+        # gaat alles van de repository code in de runner steken
       - name: Checkout repository code into runner
         uses: actions/checkout@v2
+        # validator runnen om te zien of de webpagina goed gebouwd is
       - name: Check HTML and CSS with HTML5 Validator
         uses: Cyb3r-Jak3/html5validator-action@v7.2.0
         with:
